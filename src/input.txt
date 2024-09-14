@@ -4,6 +4,7 @@ Start
     define real x, y;
     define booleano flag, condition;
     define texto mensagem;
+    define booleano condition;
 
     
     a := 10;

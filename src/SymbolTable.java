@@ -17,7 +17,11 @@ public class SymbolTable {
     private final Map<String, SymbolInfo> symbols = new HashMap<>();
 
     public void declare(String name) {
-        symbols.put(name, new SymbolInfo(true));
+        if (isDeclared(name)) {
+            System.err.println("Variavel '" + name + "' ja foi declarada.");
+        } else {
+            symbols.put(name, new SymbolInfo(true));
+        }
     }
 
     public void initialize(String name) {
