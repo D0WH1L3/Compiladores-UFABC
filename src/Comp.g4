@@ -48,10 +48,11 @@ condition : expr (REL_OP expr)?;
 // Bloco de código, que pode conter múltiplas expressões ou declarações
 bloco : '{' body '}';
 
-// Regra para termos, que podem ser identificadores, números, texto ou expressões entre parênteses
+// Regra para termos, que podem ser identificadores, números, texto, booleanos ou expressões entre parênteses
 termo : ID
       | NUM
       | TEXTO
+      | BOOL
       | '(' expr ')';
 
 // Operadores aritméticos
@@ -62,6 +63,9 @@ REL_OP : '>' | '<' | '>=' | '<=' | '==' | '!=';
 
 // Operador de atribuição (:=)
 ATRIB : ':=';
+
+// Booleanos (true e false)
+BOOL : 'true' | 'false';
 
 // Pontuação
 VIRG : ',';
