@@ -1,0 +1,54 @@
+Start
+    
+    define numeros a, b, c, d;
+    define real x, y;
+    define booleano flag, condition;
+    define texto mensagem;
+
+    
+    a := 10;
+    b := 5;
+    x := 3.14;
+    y := x * 2;
+
+    
+    c := a + b * 2;
+    d := (a - b) / 2;
+
+    
+    mensagem := "Resultado de x";
+
+
+    if (a > b) {
+        flag := true;
+    } else {
+        flag := false;
+    }
+
+    if (x <= y) {
+        mensagem := "x eh menor ou igual a y";
+    } else {
+        mensagem := "x eh maior que y";
+    }
+
+    while (a > 0) {
+        a := a - 1;
+        print(a);
+    }
+
+    repeat {
+        print(b);
+        b := b - 1;
+    } until (b <= 0);
+
+    do {
+        print(x);
+        x := x - 0.5;
+    } while (x > 1.0);
+
+    read(a);
+    read(flag);
+
+    print(mensagem);
+    print("Programa finalizado com sucesso!");
+End
